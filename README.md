@@ -9,6 +9,9 @@
 
 https://github.com/Glo92/phase-3-project-backend
 
+## Video link
+https://youtu.be/B1VEK8N4DZY
+
 ## deployed link
 
 https://phase-3-project-frontend-5d6p.vercel.app/
