@@ -5,6 +5,9 @@
 
 #### By *Gloria Wekura*
 
+### BACKEND LINK
+https://github.com/Glo92/phase-3-project-backend
+
 ## Description
 This is an app the the user is able to login, search for shoes that he / she wishes to buy and they are unable to locate them elsewhere.
 
