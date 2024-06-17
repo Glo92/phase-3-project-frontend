@@ -2,7 +2,10 @@ import Footer from "../components/Footer"
 import NavBar from "../components/NavBar"
 import Logo from "../components/Logo"
 
+
 function Home() {
+ 
+  
   return (
   <div className="bg-pink-400">
     <div className="bg-black">
@@ -11,6 +14,7 @@ function Home() {
     </div>
     <NavBar/>
     <Logo/>
+  
     <Footer/>
   </div>
 

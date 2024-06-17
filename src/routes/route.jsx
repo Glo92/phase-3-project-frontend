@@ -3,19 +3,26 @@ import Home from './Home';
 import Login from './Login';
 import ShoeList from './ShoeList';
 
+import ShoeDetails from './ShoeDetails';
+
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Home/>
+        element: <Home/>,
     },
     {
         path:'/login',
-        element: <Login/>
+        element: <Login/>,
     },
     {
         path:'/shoelist',
-        element:<ShoeList/>
-    }
+        element:<ShoeList/>,
+    },
+    {
+        path:'/shoes/:shoeId',
+        element: <ShoeDetails/>,
+    },
+ 
    
 ])
 

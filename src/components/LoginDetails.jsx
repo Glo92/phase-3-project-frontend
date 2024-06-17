@@ -1,6 +1,9 @@
 import { useForm, Controller } from 'react-hook-form'
 import {z} from "zod"
 import {zodResolver} from '@hookform/resolvers/zod'
+import { createRef } from 'react';
+
+
 
 const schema = z.object({
   name: z.string({
@@ -18,8 +21,9 @@ const schema = z.object({
 })
 
 function LoginDetails() {
+  const formRef = createRef();
 
-  const {control, handleSubmit, formState} = useForm({
+  const {control, handleSubmit, formState, reset } = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
       name: '',
@@ -32,9 +36,18 @@ function LoginDetails() {
   console.log(formState.errors)
 
   const onSubmit = (values) => {
-    console.log(values)
+    fetch("http://localhost:8000/users", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({...values})
+    })
+    formRef.current.reset();
+    
+  
   }
-
+  
   return (
     <div className='flex justify-center w-full bg-white'>
         <form onSubmit={handleSubmit(onSubmit)} className='bg-pink-200 rounded-lg border-double border-4 border-pink-300 mt-5 mb-5'>
@@ -48,6 +61,7 @@ function LoginDetails() {
             placeholder='Enter your name...' 
             required
             {...field}
+      
             />
           )}
           />
@@ -57,15 +71,16 @@ function LoginDetails() {
           render={({field}) => (
             <input 
             className="bg-white pb-3 pt-6 my-8 border-b-2 border-gray-600 focus:border-pink-500 outline-none w-full"
-            type="number" 
+            type="text" 
             placeholder='Enter your phone number...' 
             required
             {...field}
+            
             />
           )}
           />
 
-<Controller
+         <Controller
           name='email' 
           control={control}
           render={({field}) => (
@@ -93,6 +108,7 @@ function LoginDetails() {
             />
           )}
           />
+         
           
               <button className="bg-black my-3 px-7 ml-3  text-white font-semibold pb-2 pt-2" type='submit'>Login</button>
         </form>
@@ -100,4 +116,4 @@ function LoginDetails() {
   )
 }
 
-export default LoginDetails
+export default LoginDetails;

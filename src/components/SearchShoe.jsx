@@ -1,12 +1,13 @@
-import React from 'react'
 
-function SearchShoe() {
+function SearchShoe({searchInput,setSearchInput}) {
+
   return (
     <div>
          <div className='px-10'>
         <h2 className="font-bold text-xl ">Search Shoes</h2>
         <input 
-        onChange={(e) => console.log(e.target.value)}
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
        
         type="text" 
         className="border-b-4 border-gray-600 focus:border-pink-500 pt-4 pl-3 outline-none w-full" 
