@@ -10,11 +10,9 @@
 https://github.com/Glo92/phase-3-project-backend
 
 ## Video link
-https://youtu.be/B1VEK8N4DZY
 
-## deployed link
+https://youtu.be/NBMLLF9IEio
 
-https://phase-3-project-frontend-5d6p.vercel.app/
 
 ## Description
 This is an app the the user is able to login, search for shoes that he / she wishes to buy and they are unable to locate them elsewhere.
@@ -32,6 +30,8 @@ git@github.com:Glo92/phase-3-project-frontend.git
 ```
 
 # Live Link
+
+https://phase-3-project-frontend-5d6p.vercel.app/
 
 
 ## Technologies used
