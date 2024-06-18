@@ -9,9 +9,13 @@
 
 https://github.com/Glo92/phase-3-project-backend
 
-## Video link
+## Video link for the frontend
 
 https://youtu.be/NBMLLF9IEio
+
+## Video Link for the Backend
+
+https://youtu.be/xaTcsLyfb_E
 
 
 ## Description
